@@ -1,0 +1,84 @@
+:root {
+  --bg-gradient: linear-gradient(160deg, #0a0a1a 0%, #0f0c29 30%, #0d1117 100%);
+
+  --accent: #818cf8;
+  --accent-deep: #6366f1;
+  --accent-glow: rgba(129, 140, 248, 0.25);
+
+  --text-primary: rgba(255, 255, 255, 0.9);
+  --text-body: rgba(255, 255, 255, 0.75);
+  --text-secondary: rgba(255, 255, 255, 0.4);
+  --text-hint: rgba(255, 255, 255, 0.2);
+
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-bg-hover: rgba(255, 255, 255, 0.09);
+  --glass-blur: 8px;
+  --glass-radius: 14px;
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  --glass-toolbar-bg: rgba(255, 255, 255, 0.06);
+  --glass-toolbar-blur: 8px;
+  --glass-toolbar-radius: 14px;
+
+  --glass-card-bg: rgba(255, 255, 255, 0.04);
+  --glass-card-blur: 10px;
+  --glass-card-radius: 20px;
+
+  --input-bg: rgba(255, 255, 255, 0.04);
+  --input-border: rgba(255, 255, 255, 0.08);
+  --input-border-focus: rgba(129, 140, 248, 0.5);
+  --input-radius: 8px;
+
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb: rgba(255, 255, 255, 0.1);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-body);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+input, textarea {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--input-radius);
+  color: var(--text-primary);
+  padding: 6px 10px;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--input-border-focus);
+  box-shadow: 0 0 0 2px var(--accent-glow);
+}
